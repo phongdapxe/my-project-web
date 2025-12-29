@@ -1,0 +1,123 @@
+<!-- Xây dựng website bóng đá
+Xây dựng trang chủ giới thông tin bóng đá theo danh mục, trang thông tin mùa giải
+Xây dựng chức năng, tìm kiếm, lịch thi đấu bóng đá
+Xây dựng trang quản lý tin tức cho bóng đá -->
+
+
+<!DOCTYPE html>
+<html lang="vi">
+    <head>  
+        <meta charset="UTF-8">
+        <title>
+            bongda24/7 - Tin tức bóng đá, Lịch thi đấu, BXH
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="bongda24/7" style="height: 30px;">6
+                </a>
+                <a href="moinhat.html" class="moinhat">mới nhất</a>
+                <a href="lichthidau.html" class="lichthidau">lịch thi đấu</a>
+                <a href="ketqua.html" class="ketqua">kết quả</a>
+                <a href="tintuc.html" class="tintuc"> tin tức</a>
+                <a href="giaidau.html" class="giaidau">giải đấu</a>
+                <a href="doibong.html" class="đội bóng">đội bóng</a>
+
+                <!-- hiệu ứng kính lúp tìm kiếm -->
+                <svg id="search-icon" class="icon-search" viewBox="0 0 24 24" >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="19" y1="19" x2="23" y2="23" />
+                </svg>
+                <div class="search" id="search-box">
+                    <input type="text" id="text" placeholder="Tìm kiếm giải đấu, đội bóng, lịch thi đấu.." autocomplete="off" />
+                    <div id="result"></div>
+                </div>
+                <script src="main.js"></script>
+                
+            </nav>
+        </header>
+                <div class="dropdown">
+                <div class="vunghover"></div>
+                    <div class="dropdown-content">
+                        <h3>
+                            <span style="color: red;">|</span>
+                            <span>Top giải đấu hàng đầu</span>
+                        </h3>
+                        <div class="grid-container">
+                            <!-- sau này sẽ thêm href -->
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/worldcup.png" alt="worldcup">
+                                    <p>FIFA World Cup</p>                                
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/euro.jpg" alt="euro">
+                                    <p>UEFA European Championship</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/c1.png" alt="c1">
+                                    <p>Champions League</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/c2.png" alt="c2">
+                                    <p>Europa League</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                <img src="img/logogiai/c3.png" alt="c3">
+                                <p>Europa Conference League</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/nha1.png" alt="Premier League">
+                                    <p>Premier League</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/laliga.png" alt="Laliga">
+                                    <p>Laliga</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                <img src="img/logogiai/vleague1.png" alt="vleague">
+                                <p>V-league</p>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/seria.png" alt="seria">
+                                    <p>Seria</p>
+                                </a>
+                                
+                            </div>
+                            <div class="grid-item">
+                                <a href="#">
+                                    <img src="img/logogiai/bundesliga.png" alt="Bundesliga">
+                                    <p>Bundesliga</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+        
+        <!-- đây là bản quyền đáy trang -->
+        <footer>
+            <p>© Bản quyền thuộc về bongda24/7</p>
+            <p>Địa chỉ: Hưng Yên - Hưng Yên - Việt Nam</p>
+            <p>Email: bongda24/7@tintucbongda.vn - Điện thoại: 0987654321</p>
+        </footer>
+    </body> 
+</html>

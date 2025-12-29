@@ -1,0 +1,314 @@
+<!-- Xây dựng website bóng đá
+Xây dựng trang chủ giới thông tin bóng đá theo danh mục, trang thông tin mùa giải
+Xây dựng chức năng, tìm kiếm, lịch thi đấu bóng đá
+Xây dựng trang quản lý tin tức cho bóng đá -->
+
+
+<!DOCTYPE html>
+<html lang="vi">
+    <head>  
+        <meta charset="UTF-8">
+        <title>
+            bongda24/7 - Tin tức bóng đá, Lịch thi đấu, BXH
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="bongda24/7" style="height: 30px;">6
+                </a>
+                <a href="moinhat.html" class="moinhat">mới nhất</a>
+                <a href="lichthidau.html" class="lichthidau">lịch thi đấu</a>
+                <a href="ketqua.html" class="ketqua">kết quả</a>
+                <a href="tintuc.html" class="tintuc"> tin tức</a>
+                <a href="giaidau.html" class="giaidau">giải đấu</a>
+                <a href="doibong.html" class="đội bóng">đội bóng</a>
+
+                <!-- hiệu ứng kính lúp tìm kiếm -->
+                <svg id="search-icon" class="icon-search" viewBox="0 0 24 24" >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="19" y1="19" x2="23" y2="23" />
+                </svg>
+                <div class="search" id="search-box">
+                    <input type="text" id="text" placeholder="Tìm kiếm giải đấu, đội bóng, lịch thi đấu.." autocomplete="off" />
+                    <div id="result"></div>
+                </div>
+                <script src="main.js"></script>
+                
+            </nav>
+        </header>
+        <!-- hover giải đấu -->
+        <div class="dropdown">
+            <div class="hovergiaidau"></div>
+            <div class="dropdown-content" style="height: 200px;">
+                <h3>
+                    <span style="color: red;">|</span>
+                    <span>Top giải đấu hàng đầu</span>
+                </h3>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/worldcup.png" alt="worldcup">
+                            <p>FIFA World Cup</p>                                
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/euro.jpg" alt="euro">
+                            <p>UEFA European Championship</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/c1.png" alt="c1">
+                            <p>Champions League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/c2.png" alt="c2">
+                            <p>Europa League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/c3.png" alt="c3">
+                            <p>Europa Conference League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/nha1.png" alt="Premier League">
+                            <p>Premier League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/laliga.png" alt="Laliga">
+                            <p>Laliga</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/vleague1.png" alt="vleague">
+                            <p>V-league</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/seria.png" alt="seria">
+                            <p>Seria</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="img/logogiai/bundesliga.png" alt="Bundesliga">
+                            <p>Bundesliga</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- hover đội bóng -->
+         <div class="dropdown" style="right: 4px;">
+            <div class="hoverdoibong"></div>
+            <div class="dropdown-content" style="height: 330px;">
+                <h3>
+                    <span style="color: red;">|</span>
+                    <span>Top CLB</span>
+                </h3>
+                <div class="grid-container1">
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/real.jpg" alt="Real Madrid">
+                            <p>Real Madrid</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/mc.jpg" alt="Manchester City">
+                            <p>Manchester City</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/barca.jpg" alt="Barcelona">
+                            <p>Barcelona</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/bayern.jpg" alt="Bayern Munich">
+                            <p>Bayern Munich</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/liverpool.jpg" alt="Liverpool">
+                            <p>Liverpool</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/psg.jpg" alt="Paris Saint-Germain">
+                            <p>Paris Saint-Germain</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/mu.jpg" alt="Manchester United">
+                            <p>Manchester United</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/arsenal.jpg" alt="Arsenal">
+                            <p>Arsenal</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/chelsea.jpg" alt="Chelsea">
+                            <p>Chelsea</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/inter.jpg" alt="Inter Milan">
+                            <p>Inter Milan</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/dortmun.jpg" alt="Borussia Dortmund">
+                            <p>Borussia Dortmund</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/juve.jpg" alt="Juventus">
+                            <p>Juventus</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/atletico.jpg" alt="Atlético Madrid">
+                            <p>Atlético Madrid</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/bayern07.jpg" alt="Bayer Leverkusen">
+                            <p>Bayer Leverkusen</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/acmilan.jpg" alt="AC Milan">
+                            <p>AC Milan</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/tot.jpg" alt="Tottenham Hotspur">
+                            <p>Tottenham Hotspur</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/alnas.jpg" alt="Al-Nassr FC">
+                            <p>Al-Nassr FC</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/napoli.jpg" alt="Napoli">
+                            <p>Napoli</p>
+                        </a>
+                    </div>    
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/porto.jpg" alt="FC Porto">
+                            <p>FC Porto</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/newcastle.jpg" alt="Newcastle United">
+                            <p>Newcastle United</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/miami.jpg" alt="Inter Miami">
+                            <p>Inter Miami</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/ajax.jpg" alt="Ajax">
+                            <p>Ajax</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/brighton.jpg" alt="Brighton & Hove Albion">
+                            <p>Brighton & Hove Albion</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/monaco.jpg" alt="Monaco">
+                            <p>Monaco</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/benfica.jpg" alt="Benfica">
+                            <p>Benfica</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/spoting.jpg" alt="Sporting CP">
+                            <p>Sporting CP</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/aston.jpg" alt="Aston Villa">
+                            <p>Aston Villa</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/westham.jpg" alt="West Ham United">
+                            <p>West Ham United</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/crys.jpg" alt="Crystal Palace">
+                            <p>Crystal Palace</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="img/logoclb/bren.jpg" alt="brentford">
+                            <p>brentford</p>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+         </div>
+        
+        <!-- đây là bản quyền đáy trang -->
+        <footer>
+            <p>© Bản quyền thuộc về bongda24/7</p>
+            <p>Địa chỉ: Hưng Yên - Hưng Yên - Việt Nam</p>
+            <p>Email: bongda24/7@tintucbongda.vn - Điện thoại: 0987654321</p>
+        </footer>
+    </body> 
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>  
+    <meta charset="UTF-8">
+    <title>bongda24/7 - Tin tức bóng đá, Lịch thi đấu, BXH</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Sửa đường dẫn CSS -->
+</head>
+<body>
+    <header style="margin-bottom: 20px;">
+        <nav>
+            <a href="../index.html" class="logo"> <!-- Sửa đường dẫn -->
+                <img src="../img/logo.png" alt="bongda24/7" style="height: 30px;">
+            </a>
+            <a href="../moinhat.html" class="moinhat">mới nhất</a>
+            <a href="../lichthidau.html" class="lichthidau">lịch thi đấu</a> 
+            <a href="../ketqua.html" class="ketqua">kết quả</a>
+            <a href="../tintuc.html" class="tintuc">tin tức</a>
+            <a href="#giaidau">giải đấu</a>
+            <a href="#doibong">đội bóng</a>
+            <!-- hiệu ứng kính lúp tìm kiếm -->
+            <svg id="search-icon" class="icon-search" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="19" y1="19" x2="23" y2="23" /> 
+            </svg>
+            <div class="search" id="search-box">
+                <input type="text" id="text" placeholder="Tìm kiếm giải đấu, đội bóng, lịch thi đấu.." autocomplete="off" />
+                <div id="result"></div>
+            </div>
+            <script src="../main.js"></script> <!-- Sửa đường dẫn JS -->
+        </nav>
+        </header>
+        <!-- hover giải đấu -->
+        <div class="dropdown">
+            <div class="hovergiaidau" style="top: -75px;"></div>
+            <div class="dropdown-content" style= "height: 200px; top: -34px;">
+                <h3>
+                    <span style="color: red;">|</span>
+                    <span>Top giải đấu hàng đầu</span>
+                </h3>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/worldcup.png" alt="worldcup">
+                            <p>FIFA World Cup</p>                                
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/euro.jpg" alt="euro">
+                            <p>UEFA European Championship</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/c1.png" alt="c1">
+                            <p>Champions League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/c2.png" alt="c2">
+                            <p>Europa League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/c3.png" alt="c3">
+                            <p>Europa Conference League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/nha1.png" alt="Premier League">
+                            <p>Premier League</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/laliga.png" alt="Laliga">
+                            <p>Laliga</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/vleague1.png" alt="vleague">
+                            <p>V-league</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/seria.png" alt="seria">
+                            <p>Seria</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#">
+                            <img src="../img/logogiai/bundesliga.png" alt="Bundesliga">
+                            <p>Bundesliga</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- hover đội bóng -->
+        <div class="dropdown" style="right: 4px;">
+            <div class="hoverdoibong" style="top: -75px;"></div>
+            <div class="dropdown-content" style="height: 330px; top: -34px;">
+                <h3>
+                    <span style="color: red;">|</span>
+                    <span>Top CLB</span>
+                </h3>
+                <div class="grid-container1">
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/real.jpg" alt="Real Madrid">
+                            <p>Real Madrid</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/mc.jpg" alt="Manchester City">
+                            <p>Manchester City</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/barca.jpg" alt="Barcelona">
+                            <p>Barcelona</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/bayern.jpg" alt="Bayern Munich">
+                            <p>Bayern Munich</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/liverpool.jpg" alt="Liverpool">
+                            <p>Liverpool</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/psg.jpg" alt="Paris Saint-Germain">
+                            <p>Paris Saint-Germain</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/mu.jpg" alt="Manchester United">
+                            <p>Manchester United</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/arsenal.jpg" alt="Arsenal">
+                            <p>Arsenal</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/chelsea.jpg" alt="Chelsea">
+                            <p>Chelsea</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/inter.jpg" alt="Inter Milan">
+                            <p>Inter Milan</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/dortmun.jpg" alt="Borussia Dortmund">
+                            <p>Borussia Dortmund</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/juve.jpg" alt="Juventus">
+                            <p>Juventus</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/atletico.jpg" alt="Atlético Madrid">
+                            <p>Atlético Madrid</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/bayern07.jpg" alt="Bayer Leverkusen">
+                            <p>Bayer Leverkusen</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/acmilan.jpg" alt="AC Milan">
+                            <p>AC Milan</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/tot.jpg" alt="Tottenham Hotspur">
+                            <p>Tottenham Hotspur</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/alnas.jpg" alt="Al-Nassr FC">
+                            <p>Al-Nassr FC</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/napoli.jpg" alt="Napoli">
+                            <p>Napoli</p>
+                        </a>
+                    </div>    
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/porto.jpg" alt="FC Porto">
+                            <p>FC Porto</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/newcastle.jpg" alt="Newcastle United">
+                            <p>Newcastle United</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/miami.jpg" alt="Inter Miami">
+                            <p>Inter Miami</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/ajax.jpg" alt="Ajax">
+                            <p>Ajax</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/brighton.jpg" alt="Brighton & Hove Albion">
+                            <p>Brighton & Hove Albion</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/monaco.jpg" alt="Monaco">
+                            <p>Monaco</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/benfica.jpg" alt="Benfica">
+                            <p>Benfica</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/spoting.jpg" alt="Sporting CP">
+                            <p>Sporting CP</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/aston.jpg" alt="Aston Villa">
+                            <p>Aston Villa</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/westham.jpg" alt="West Ham United">
+                            <p>West Ham United</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/crys.jpg" alt="Crystal Palace">
+                            <p>Crystal Palace</p>
+                        </a>
+                    </div>
+                    <div class="grid-item1">
+                        <a href="#">
+                            <img src="../img/logoclb/bren.jpg" alt="brentford">
+                            <p>brentford</p>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+         </div>
+        <a href="../index.html">
+            <img src="../img/iconindex.png" alt="" style="height: 15px; width: 15px; margin-left: 310px; margin-bottom: 0cm;">
+            <span class="link-text">Trang chủ</span>
+        </a>
+        <div class="container">
+            <div class="centerr">
+                <h1 style="margin-top: 0cm;">U16 Việt Nam quật ngã Saudi Arabia 2-1: Chiến thắng của lòng quả cảm   </h1>
+                <p>19:20 01/06/2025</p>
+                <h3>
+                    <span style="color: white; background-color: red; border-radius: 5px;">bongda247.vn</span>
+                    <span>Dưới cái nắng gay gắt của Hohhot, U16 Việt Nam đã tạo nên một bất ngờ lớn khi xuất sắc đánh bại U16 Saudi Arabia với tỷ số 2-1, khẳng định tinh thần chiến đấu quả cảm và ý chí kiên cường của các cầu thủ trẻ. Trận đấu diễn ra căng thẳng và đầy kịch tính, mang đến niềm vui vỡ òa cho người hâm mộ bóng đá Việt Nam.</span>
+                </h3>
+                <figure style="text-align: center;">
+                    <img src="../img/vietnam/vie1.jpg" alt="" style="height: 500px; width: 830px; display: block; margin: 0 auto;">
+                    <figcaption style="font-size: 14px; color: #555; margin-top: 5px;">
+                        <i>U16 Việt Nam khép lại hành trình tại giải U16 quốc tế CFA Team China bằng màn trình diễn ấn tượng. Ảnh: VFF.</i>
+                    </figcaption>
+                </figure>
+                <div class="textt" style="height: 100%; width: 900px; display: block; margin: 0 auto;">
+                    <p style="font-size: 20px; color: black;">
+                        Ngay từ những phút đầu, U16 Việt Nam đã thể hiện rõ sự chuẩn bị kỹ lưỡng về chiến thuật. Đối đầu với một đối thủ được đánh giá cao hơn về thể lực và kỹ thuật, các học trò đã chọn lối chơi phòng ngự chắc chắn và rình rập cơ hội phản công. Dù phải chơi dưới áp lực liên tục, hàng phòng ngự của U16 Việt Nam vẫn đứng vững trước những đợt tấn công của đối phương.
+                    </p>
+                    <p style="font-size: 20px; color: black;">
+                        Tuy nhiên, ở phút thứ 24, U16 Saudi Arabia đã tìm được bàn mở tỷ số do công của Abdullah Al Dawsari, sau một tình huống phối hợp ăn ý. Bàn thua sớm không làm nhụt chí các cầu thủ trẻ Việt Nam. Chỉ 5 phút sau, niềm hy vọng được thắp sáng khi Quang Khôi có pha xử lý đẳng cấp, đưa bóng vào lưới đối thủ, san bằng cách biệt 1-1. Bàn thắng quan trọng này đã giúp U16 Việt Nam lấy lại sự tự tin và tiếp tục duy trì thế trận cân bằng.
+                    </p>
+                    <p style="font-size: 20px; color: black;">
+                        Bước sang hiệp hai, U16 Saudi Arabia dồn ép mạnh mẽ và có cơ hội vàng để vươn lên dẫn trước khi được hưởng một quả phạt đền. Tuy nhiên, trên chấm 11m, tiền đạo của Saudi Arabia lại bỏ lỡ đáng tiếc, bỏ lỡ cơ hội định đoạt trận đấu. Đây có lẽ là bước ngoặt quan trọng, tiếp thêm động lực cho U16 Việt Nam.
+                    </p>
+                    <p style="font-size: 20px; color: black;">
+                        Và rồi, điều kỳ diệu đã đến ở phút 81. Từ một pha phản công nhanh, Nguyễn Lực đã dứt điểm chính xác, ghi bàn thắng nâng tỷ số lên 2-1 cho U16 Việt Nam. Cả đội vỡ òa trong niềm vui sướng khi tiếng còi mãn cuộc vang lên, khép lại trận đấu đầy quả cảm dưới thời tiết khắc nghiệt.
+                    </p>
+                    <p style="font-size: 20px; color: black;">
+                        Chiến thắng này không chỉ là một kết quả ấn tượng về mặt tỷ số mà còn là minh chứng cho sự nỗ lực, tinh thần đoàn kết và ý chí chiến thắng của U16 Việt Nam. Các cầu thủ đã vượt qua khó khăn về điều kiện thi đấu và áp lực từ đối thủ để giành lấy vinh quang, mang lại niềm tự hào cho bóng đá nước nhà. Ở lượt trận trước đó, thầy trò HLV Cristiano Roland  cũng xuất sắc cầm hòa chủ nhà U16 Trung Quốc 2-2 sau khi sớm bị thủng lưới 2 bàn trong hiệp 1.
+                    </p>
+                    <p style="font-size: 20px; color: black;">
+                        Như vậy, khép lại hành trình tại giải U16 quốc tế CFA Team China, U16 Việt Nam có 1 thắng, 1 hòa và 1 thua.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>© Bản quyền thuộc về bongda24/7</p>
+            <p>Địa chỉ: Hưng Yên - Hưng Yên - Việt Nam</p>
+            <p>Email: bongda24/7@tintucbongda.vn - Điện thoại: 0987654321</p>
+        </footer>
+    </body> 
+</html>
+
+
+
+
+
+

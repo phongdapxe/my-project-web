@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        bongda24/7 - Tin tức bóng đá, Lịch thi đấu, BXH
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="bongda24/7" style="height: 30px;">
+            </a>
+            <a href="moinhat.html" class="moinhat">mới nhất</a>
+            <a href="lichthidau.html" class="lichthidau">lịch thi đấu</a>
+            <a href="ketqua.html" class="ketqua">kết quả</a>
+            <a href="tintuc.html" class="tintuc"> tin tức</a>
+            <a href="#giaidau" id="giaidaulink">giải đấu</a>
+            <a href="#doibong">đội bóng</a>
+            <!-- hiệu ứng kính lúp tìm kiếm -->
+            <svg id="search-icon" class="icon-search" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="19" y1="19" x2="23" y2="23" />
+            </svg>
+            <div class="search" id="search-box">
+                <input type="text" id="text" placeholder="Tìm kiếm giải đấu, đội bóng, lịch thi đấu.."
+                    autocomplete="off" />
+                <div id="result"></div>
+            </div>
+            <script src="main.js"></script>
+        </nav>
+    </header>
+    <!-- hover giải đấu -->
+    <div class="dropdown">
+        <div class="hovergiaidau"></div>
+        <div class="dropdown-content" style="height: 200px;">
+            <h3>
+                <span style="color: red;">|</span>
+                <span>Top giải đấu hàng đầu</span>
+            </h3>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/worldcup.png" alt="worldcup">
+                        <p>FIFA World Cup</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/euro.jpg" alt="euro">
+                        <p>UEFA European Championship</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/c1.png" alt="c1">
+                        <p>Champions League</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/c2.png" alt="c2">
+                        <p>Europa League</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/c3.png" alt="c3">
+                        <p>Europa Conference League</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/nha1.png" alt="Premier League">
+                        <p>Premier League</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/laliga.png" alt="Laliga">
+                        <p>Laliga</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/vleague1.png" alt="vleague">
+                        <p>V-league</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/seria.png" alt="seria">
+                        <p>Seria</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <img src="img/logogiai/bundesliga.png" alt="Bundesliga">
+                        <p>Bundesliga</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hover đội bóng -->
+    <div class="dropdown" style="right: 4px;">
+        <div class="hoverdoibong"></div>
+        <div class="dropdown-content" style="height: 330px;">
+            <h3>
+                <span style="color: red;">|</span>
+                <span>Top CLB</span>
+            </h3>
+            <div class="grid-container1">
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/real.jpg" alt="Real Madrid">
+                        <p>Real Madrid</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/mc.jpg" alt="Manchester City">
+                        <p>Manchester City</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/barca.jpg" alt="Barcelona">
+                        <p>Barcelona</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/bayern.jpg" alt="Bayern Munich">
+                        <p>Bayern Munich</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/liverpool.jpg" alt="Liverpool">
+                        <p>Liverpool</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/psg.jpg" alt="Paris Saint-Germain">
+                        <p>Paris Saint-Germain</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/mu.jpg" alt="Manchester United">
+                        <p>Manchester United</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/arsenal.jpg" alt="Arsenal">
+                        <p>Arsenal</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/chelsea.jpg" alt="Chelsea">
+                        <p>Chelsea</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/inter.jpg" alt="Inter Milan">
+                        <p>Inter Milan</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/dortmun.jpg" alt="Borussia Dortmund">
+                        <p>Borussia Dortmund</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/juve.jpg" alt="Juventus">
+                        <p>Juventus</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/atletico.jpg" alt="Atlético Madrid">
+                        <p>Atlético Madrid</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/bayern07.jpg" alt="Bayer Leverkusen">
+                        <p>Bayer Leverkusen</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/acmilan.jpg" alt="AC Milan">
+                        <p>AC Milan</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/tot.jpg" alt="Tottenham Hotspur">
+                        <p>Tottenham Hotspur</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/alnas.jpg" alt="Al-Nassr FC">
+                        <p>Al-Nassr FC</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/napoli.jpg" alt="Napoli">
+                        <p>Napoli</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/porto.jpg" alt="FC Porto">
+                        <p>FC Porto</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/newcastle.jpg" alt="Newcastle United">
+                        <p>Newcastle United</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/miami.jpg" alt="Inter Miami">
+                        <p>Inter Miami</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/ajax.jpg" alt="Ajax">
+                        <p>Ajax</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/brighton.jpg" alt="Brighton & Hove Albion">
+                        <p>Brighton & Hove Albion</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/monaco.jpg" alt="Monaco">
+                        <p>Monaco</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/benfica.jpg" alt="Benfica">
+                        <p>Benfica</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/spoting.jpg" alt="Sporting CP">
+                        <p>Sporting CP</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/aston.jpg" alt="Aston Villa">
+                        <p>Aston Villa</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/westham.jpg" alt="West Ham United">
+                        <p>West Ham United</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/crys.jpg" alt="Crystal Palace">
+                        <p>Crystal Palace</p>
+                    </a>
+                </div>
+                <div class="grid-item1">
+                    <a href="#">
+                        <img src="img/logoclb/bren.jpg" alt="brentford">
+                        <p>brentford</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- chữ chạy -->
+    <marquee behavior="scroll" direction="left">
+        Mùa giải 2024/2025 đã chính thức khép lại ở hầu hết các giải vô địch quốc gia hàng đầu châu Âu. Tại Premier
+        League, Liverpool đã xuất sắc đăng quang ngôi vô địch, cân bằng kỷ lục của Manchester United về số lần vô địch
+        nước Anh.
+        | Real Madrid đã vô địch La Liga một cách thuyết phục, khẳng định vị thế ông lớn của bóng đá Tây Ban Nha.
+        | Ở Bundesliga, Bayer Leverkusen đã hoàn tất một mùa giải lịch sử với chức vô địch không thể tin được, kết thúc
+        sự thống trị của Bayern Munich.
+        | Inter Milan đã lên ngôi vô địch Serie A sớm trước vài vòng đấu, thể hiện sức mạnh vượt trội.
+        | Chelsea đã có một mùa giải thành công rực rỡ ở đấu trường châu Âu khi đánh bại Real Betis để vô địch UEFA
+        Conference League 2024/2025, hoàn tất bộ sưu tập các danh hiệu cấp câu lạc bộ của UEFA.
+        | Tâm điểm hiện tại đang đổ dồn vào trận chung kết UEFA Champions League sắp diễn ra vào cuối tuần này, hứa hẹn
+        một màn thư hùng đỉnh cao giữa hai gã khổng lồ của bóng đá châu Âu.
+        | Các tin tức chuyển nhượng đang nóng hơn bao giờ hết khi các câu lạc bộ bắt đầu lên kế hoạch cho mùa giải mới,
+        với nhiều thương vụ bom tấn và những bản hợp đồng tự do được kỳ vọng sẽ sớm được công bố.
+        | Ngoài ra, các đội tuyển quốc gia cũng đang ráo riết chuẩn bị cho các giải đấu lớn sắp tới, với những trận giao
+        hữu khởi động đã bắt đầu diễn ra.
+    </marquee>
+    <!-- chiếm bảng tin giữa và để trắng 2 bên lề cho thoáng -->
+    <main class="container">
+        <section class="centerr">
+            <article class="first-part">
+                <a href="tintuc.html" class="baner1">
+                    <div class="poster-news">
+                        <h4>TIN TỨC NỔI BẬT GẦN ĐÂY</h4>
+                    </div>
+                </a>
+                <div class="main-left">
+                    <a href="#" class="baivietdau">
+                        <img src="img/trangmoinhat/post1ronal.jpg" alt="ảnh">
+                        <span>
+                            <h1>Lần đầu tiên trong lịch sử Poturgal gặp Spain trong trận chung kết</h1>
+                        </span>
+                    </a>
+                </div>
+                <div class="main-right">
+                    <a href="moinhat.html"><img src="img/trangmoinhat/main-right.jpg" alt=""><span>Bỉ đã khởi đầu chiến
+                            dịch vòng loại World Cup bằng một trận hòa 1-1 đáng tiếc trên sân của Bắc
+                            Macedonia.</span></a>
+                    <a href="moinhat.html"><img src="img/trangmoinhat/main-right1.jpg" alt=""><span>Man Utd chi đậm, đề
+                            nghị Mbeumo mức lương gấp 5 lần hiện tại</span></a>
+                    <a href="moinhat.html"><img src="img/trangmoinhat/main-right2.jpg" alt=""><span>Liverpool chốt xong
+                            Wirtz, thương vụ kỷ lục đang hoàn tất</span></a>
+                    <a href="moinhat.html"><img src="img/trangmoinhat/main-right3.jpg" alt=""><span>Cách mạng ở Man Utd:
+                            Amorim gạch tên Garnacho, cân nhắc bán Casemiro</span></a>
+                    <a href="moinhat.html"><img src="img/trangmoinhat/main-right4.jpg" alt=""><span>HLV Jordan vỡ òa khi
+                            lần đầu giành vé dự World Cup</span></a>
+                    <a href="moinhat.html"><img src="img/trangmoinhat/main-right5.jpg" alt=""><span>Tottenham phải trả
+                            cái giá quá đắt cho Postecoglou để vô địch Europa League?</span></a>
+                </div>
+            </article>
+            <!-- phần mới nhất -->
+            <article class="first-part">
+                <a href="moinhat.html" class="baner2">
+                    <div class="poster-news">
+                        <h4>MỚI NHẤT TRONG TUẦN QUA</h4>
+                    </div>
+                </a>
+                <div class="news-left">
+                    <a href="#">
+                        <img src="img/trangmoinhat/post-psg.jpg" alt="">
+                        <span>
+                            <h1>Vùi dập Inter với tỉ số 5-0, PSG lần đầu vô địch Champions League 1 cách nhàn nhất</h1>
+                        </span>
+                    </a>
+                    <p style="margin: 0 15px">
+                        PSG đã khởi đầu với 1 tâm lý mạnh mẽ, và rồi họ đánh bại Inter với một tỉ số không thể sâu hơn
+                        trong lịch sử chung kết Champions League
+                    </p>
+                </div>
+                <div class="news-right1">
+                    <div class="box-news-right1">
+                        <a href="#"><img src="img/trangmoinhat/news-right1.jpg" alt=""><span>
+                                <h4>ĐT Indonesia mơ giành vé dự World Cup 2026 bằng "cửa phụ" như thế nào?</h4>
+                            </span></a>
+                    </div>
+                    <div class="box-news-right1">
+                        <a href="#"><img src="img/trangmoinhat/news-right2.jpg" alt=""><span>
+                                <h4>Trực tiếp chuyển nhượng trưa 7/6: Arsenal nhận cú hích lớn thương vụ Gyokeres</h4>
+                            </span></a>
+                    </div>
+                </div>
+                <div class="news-right2">
+                    <div class="box-news-right2">
+                        <a href="#"><img src="img/trangmoinhat/news-right3.jpg" alt=""><span>
+                                <h4>12 nước bị Mỹ cấm công dân nhập cảnh, vậy VĐV dự World Cup 2026, Olympic Los Angeles
+                                    2028 cách nào?</h4>
+                            </span></a>
+                    </div>
+                    <div class="box-news-right2">
+                        <a href="#"><img src="img/trangmoinhat/news-right4.jpg" alt=""><span>
+                                <h4>Crystal Palace họp khẩn với UEFA tránh bị tước vé dự cúp châu Âu, kết quả ra sao?
+                                </h4>
+                            </span></a>
+                    </div>
+                </div>
+            </article>
+            <!-- vietnam  -->
+            <article class="first-part">
+                <a href="tintuc/tintucvietnam.html" class="baner3">
+                    <div class="poster-news">
+                        <h4>world Cup</h4>
+                    </div>
+                </a>
+                <div class="vie-left">
+                    <div class="box-vie-left">
+                        <a href="#"><img src="img/trangmoinhat/worldcup.jpg" alt=""><span>
+                                <h1>5 chân sút đáng xem nhất Club World Cup: Messi đọ tài Mbappe, chờ bất ngờ từ Dembele
+                                </h1>
+                            </span></a>
+                        <p style="margin: 0 15px; padding-bottom: 10px;">
+                            FIFA Club World Cup 2025 tại Mỹ không chỉ là sân chơi của các đội bóng hàng đầu các châu
+                            lục, mà còn là nơi quy tụ những chân sút xuất sắc của thế giới. Trong số đó, năm cái tên nổi
+                            bật nhất đang thu hút sự chú ý đặc biệt từ người hâm mộ là: Lionel Messi, Kylian Mbappé,
+                            Erling Haaland, Harry Kane và Ousmane Dembélé...
+                        </p>
+                    </div>
+                </div>
+                <div class="vie-right1">
+                    <div class="box-vie-right1">
+                        <a href="#">
+                            <img src="img/trangmoinhat/worldcup1.jpg" alt="">
+                            <span>
+                                <h4>Davide Ancelotti bỏ qua nhiều lời mời, theo cha đến ĐT Brazil</h4>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="box-vie-right1">
+                        <a href="#">
+                            <img src="img/trangmoinhat/worldcup2.jpg" alt="">
+                            <span>
+                                <h4>Bùng nổ phút 90, Australia chấm dứt mạch bất bại của Nhật Bản</h4>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="vie-right2">
+                    <div class="box-vie-right2">
+                        <a href="#">
+                            <img src="img/trangmoinhat/worldcup3.jpg" alt="">
+                            <span>
+                                <h4>Bóng đá nữ Việt Nam tiếp tục giấc mơ lớn: Top 5 châu Á, dự World Cup 2031</h4>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="box-vie-right2">
+                        <a href="#">
+                            <img src="img/trangmoinhat/worldcup4.jpg" alt="">
+                            <span>
+                                <h4>Trực tiếp bóng đá Chile - Argentina: Simeone bỏ lỡ đáng tiếc (Vòng loại World Cup)
+                                    (Hết giờ)</h4>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© Bản quyền thuộc về bongda24/7</p>
+        <p>Địa chỉ: Hưng Yên - Hưng Yên - Việt Nam</p>
+        <p>Email: bongda24/7@tintucbongda.vn - Điện thoại: 0987654321</p>
+    </footer>
+</body>
+
+</html>
