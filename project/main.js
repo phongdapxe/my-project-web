@@ -1,75 +1,77 @@
-document.getElementById("search-icon").addEventListener("click", timkiem())
-
-function timkiem() {
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const searchIcon = document.getElementById('search-icon');
     const searchBox = document.getElementById('search-box');
     const input = document.getElementById('text');
     const result = document.getElementById('result');
 
     const data = [
-      "Arsenal", "Aston Villa", "Bournemouth", "Brentford",
-      "Brighton & Hove Albion", "Chelsea", "Crystal Palace", "Everton",
-      "Fulham", "Ipswich Town", "Leicester City", "Liverpool",
-      "Manchester City", "Manchester United", "Newcastle United",
-      "Nottingham Forest", "Southampton", "Tottenham Hotspur",
-      "West Ham United", "Wolverhampton Wanderers",
-      "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1",
-      "Champions League", "Europa League", "Conference League",
-      "V-League", "AFC Champions League", "World Cup", "Euro",
-      "Copa America", "Asian Cup", "FA Cup", "Carabao Cup", "UEFA Super Cup",
-      "Club World Cup", "VCK U23 châu Á", "SEA Games"
+        "Arsenal", "Aston Villa", "Bournemouth", "Brentford",
+        "Brighton & Hove Albion", "Chelsea", "Crystal Palace", "Everton",
+        "Fulham", "Ipswich Town", "Leicester City", "Liverpool",
+        "Manchester City", "Manchester United", "Newcastle United",
+        "Nottingham Forest", "Southampton", "Tottenham Hotspur",
+        "West Ham United", "Wolverhampton Wanderers",
+        "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1",
+        "Champions League", "Europa League", "Conference League",
+        "V-League", "AFC Champions League", "World Cup", "Euro",
+        "Copa America", "Asian Cup", "FA Cup", "Carabao Cup", "UEFA Super Cup",
+        "Club World Cup", "VCK U23 châu Á", "SEA Games"
     ];
 
     const dataWithContext = [];
-
     data.forEach(name => {
-      dataWithContext.push(name);
-      dataWithContext.push(`kết quả ${name}`);
-      dataWithContext.push(`tin tức ${name}`);
+        dataWithContext.push(name);
+        dataWithContext.push(`kết quả ${name}`);
+        dataWithContext.push(`tin tức ${name}`);
     });
 
+    // Mở hộp tìm kiếm
     searchIcon.addEventListener('click', e => {
-      e.stopPropagation();
-      searchIcon.style.display = 'none';
-      searchBox.style.display = 'block';
-      input.focus();
+        e.stopPropagation();
+        searchIcon.style.display = 'none';
+        searchBox.style.display = 'block';
+        input.focus();
     });
 
+    // Ngăn chặn sự kiện click lan ra ngoài khi nhấn vào box
     searchBox.addEventListener('click', e => {
-      e.stopPropagation();
+        e.stopPropagation();
     });
 
+    // Đóng hộp tìm kiếm khi click ra ngoài
     document.addEventListener('click', () => {
-      if (searchBox.style.display === 'block') {
-        searchBox.style.display = 'none';
-        searchIcon.style.display = 'block';
-        input.value = '';
-        result.style.display = 'none';
-      }
+        if (searchBox.style.display === 'block') {
+            searchBox.style.display = 'none';
+            searchIcon.style.display = 'block';
+            input.value = '';
+            result.style.display = 'none';
+        }
     });
 
+    // Xử lý tìm kiếm khi gõ
     input.addEventListener("input", () => {
-      const kw = input.value.toLowerCase();
-      if (!kw) {
-        result.style.display = "none";
-        return;
-      }
-      const matched = dataWithContext.filter(item => item.toLowerCase().includes(kw));
-      result.innerHTML = matched.map(item => `<div>${item}</div>`).join("");
-      result.style.display = matched.length ? "block" : "none";
+        const kw = input.value.toLowerCase().trim();
+        if (!kw) {
+            result.style.display = "none";
+            return;
+        }
+        const matched = dataWithContext.filter(item => 
+            item.toLowerCase().includes(kw)
+        );
+        result.innerHTML = matched.map(item => `<div>${item}</div>`).join("");
+        result.style.display = matched.length ? "block" : "none";
     });
 
+    // Chọn kết quả từ danh sách gợi ý
     result.addEventListener("click", e => {
-      if (e.target.tagName === "DIV") {
-        input.value = e.target.innerText;
-        result.style.display = "none";
-      }
+        if (e.target.tagName === "DIV") {
+            input.value = e.target.innerText;
+            result.style.display = "none";
+        }
     });
 
+    // Ẩn kết quả khi mất focus (tránh bị kẹt menu)
     input.addEventListener("blur", () => {
-      setTimeout(() => result.style.display = "none", 150);
+        setTimeout(() => result.style.display = "none", 200);
     });
-
-  });
-}
+});
